@@ -6,7 +6,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import confusion_matrix
 
 data = pd.read_csv(
-    "/Users/bartlomiejsadza/Documents/Projekty/ProjektyStudia/Machine Learning/Stroke_data.csv",
+    "/Users/bartlomiejsadza/Documents/Projekty/ProjektyStudia/Machine Learning/zaj1_cw/Stroke_data.csv",
     sep=";",
     decimal=",",
 )
