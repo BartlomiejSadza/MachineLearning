@@ -32,3 +32,35 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 # Sprawdzenie rozmiarów zbiorów
 print(f'Rozmiar zbioru uczącego: {X_train.shape[0]}')
 print(f'Rozmiar zbioru testowego: {X_test.shape[0]}')
+```
+
+### Jaka jest różnica między dokładnością, czułością a specyficznością? Która z tych miar i w jakim przypadku jest ważniejsza. Podać przykłady.
+
+1. **Dokładność (Accuracy)**: Jest to miara, która określa, jaki procent wszystkich przewidywań modelu jest poprawny. Oblicza się ją jako stosunek liczby poprawnych przewidywań do całkowitej liczby przypadków. Dokładność jest użyteczna, gdy klasy są zrównoważone, czyli liczba przypadków każdej klasy jest podobna.
+   - Przykład: W klasyfikacji emaili jako spam lub nie-spam, jeśli mamy 1000 emaili, z czego 950 to nie-spam i 50 to spam, model, który zawsze przewiduje "nie-spam", będzie miał dokładność 95%, ale nie będzie użyteczny w wykrywaniu spamu.
+
+2. **Czułość (Sensitivity, Recall)**: Jest to miara, która określa, jaki procent rzeczywistych pozytywnych przypadków został poprawnie zidentyfikowany przez model. Oblicza się ją jako stosunek liczby prawdziwych pozytywnych przewidywań do liczby wszystkich rzeczywistych pozytywnych przypadków. Czułość jest ważna w sytuacjach, gdzie istotne jest wykrycie wszystkich pozytywnych przypadków.
+   - Przykład: W diagnostyce medycznej, gdzie chcemy wykryć wszystkie przypadki choroby, wysoka czułość jest kluczowa, aby zminimalizować ryzyko przeoczenia chorego pacjenta.
+
+3. **Specyficzność (Specificity)**: Jest to miara, która określa, jaki procent rzeczywistych negatywnych przypadków został poprawnie zidentyfikowany przez model. Oblicza się ją jako stosunek liczby prawdziwych negatywnych przewidywań do liczby wszystkich rzeczywistych negatywnych przypadków. Specyficzność jest ważna w sytuacjach, gdzie istotne jest unikanie fałszywych alarmów.
+   - Przykład: W systemach bezpieczeństwa, gdzie fałszywe alarmy mogą być kosztowne i uciążliwe, wysoka specyficzność jest kluczowa, aby zminimalizować liczbę fałszywych alarmów.
+
+### Przykład kodu w Pythonie:
+```python
+from sklearn.metrics import accuracy_score, recall_score, precision_score
+
+# Zakładając, że mamy prawdziwe etykiety (y_true) i przewidywane etykiety (y_pred)
+y_true = [0, 1, 1, 0, 1, 0, 1, 1, 0, 0]
+y_pred = [0, 1, 0, 0, 1, 0, 1, 0, 0, 1]
+
+# Obliczenie dokładności
+accuracy = accuracy_score(y_true, y_pred)
+print(f'Dokładność: {accuracy}')
+
+# Obliczenie czułości
+sensitivity = recall_score(y_true, y_pred)
+print(f'Czułość: {sensitivity}')
+
+# Obliczenie specyficzności
+specificity = recall_score(y_true, y_pred, pos_label=0)
+print(f'Specyficzność: {specificity}')
