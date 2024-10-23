@@ -13,7 +13,7 @@ Tak, wielkość zbioru danych ma znaczenie w przypadku metody KKNN. Większe zbi
 Aby sprawdzić wpływ liczby obserwacji na uzyskiwane wyniki, można przeprowadzić eksperymenty z różnymi rozmiarami zbiorów danych i porównać wyniki. Można to zrobić poprzez podział danych na różne podzbiory i analizę wyników dla każdego z nich.
 
 ### Podział treningowy:
-|     |     |
+|True |False|
 |-----|-----|
 | 4377|  0  |
 |  0  | 221 |
