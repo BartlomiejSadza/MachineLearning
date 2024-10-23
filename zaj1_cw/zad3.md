@@ -2,7 +2,7 @@
 
 ## Co odróżnia metodę KKNN od metody KNN?
 
-Metoda KKNN (Kernel K-Nearest Neighbors) różni się od klasycznej metody KNN (K-Nearest Neighbors) tym, że wprowadza wagowanie sąsiadów za pomocą funkcji jądra (kernel). W klasycznym KNN każdy z k najbliższych sąsiadów ma równy wpływ na decyzję, podczas gdy w KKNN sąsiedzi bliżsi mają większy wpływ niż dalsi.
+Metoda KKNN (Kernel K-Nearest Neighbors) różni się od klasycznej metody KNN (K-Nearest Neighbors) tym, że wprowadza wazenie sąsiadów za pomocą funkcji jądra (kernel). W klasycznym KNN każdy z k najbliższych sąsiadów ma równy wpływ na decyzję, podczas gdy w KKNN sąsiedzi bliżsi mają większy wpływ niż dalsi.
 
 ## Czy w metodzie tej występują ograniczenia dotyczące wyboru wartości k?
 
